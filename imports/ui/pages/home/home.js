@@ -8,7 +8,7 @@ import { Messages } from '../../../api/messages/messages.js';
 
 Template.App_home.helpers({
   messages() {
-    return Messages.find().fetch();
+    return Messages.find({}, {sort: {createdBy: -1}}).fetch();
   }
 });
 
