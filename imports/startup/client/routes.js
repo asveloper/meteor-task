@@ -1,5 +1,6 @@
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { BlazeLayout } from 'meteor/kadira:blaze-layout';
+import { AccountsTemplates } from 'meteor/useraccounts:core';
 
 // Import needed templates
 import '../../ui/layouts/body/body.js';
@@ -19,3 +20,16 @@ FlowRouter.notFound = {
     BlazeLayout.render('App_body', { main: 'App_notFound' });
   },
 };
+
+AccountsTemplates.configure({
+    defaultLayout: 'App_body',
+    defaultContentRegion: 'main'
+});
+
+AccountsTemplates.configureRoute('signIn', {
+  path: '/login'
+});
+
+AccountsTemplates.configureRoute('signUp', {
+  path: '/register'
+});

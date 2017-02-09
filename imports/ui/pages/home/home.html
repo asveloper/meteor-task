@@ -1,4 +1,8 @@
 <template name="App_home">
-  {{> hello}}
-  {{> info}}
+  {{#if currentUser}}
+
+  {{else}}
+    <a href="/login">Login</a>
+    <a href="/register">Register</a>
+  {{/if}}
 </template>
