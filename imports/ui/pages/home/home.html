@@ -1,8 +1,26 @@
 <template name="App_home">
   {{#if currentUser}}
 
+    <div class="row">
+      <button class="btn btn-primary logout-btn">Logout</button>
+    </div>
+
+    <ul>
+      {{#each messages}}
+        <li>{{description}} <a href="" id={{_id}} class="remove-message">x</a></li>
+      {{/each}}
+    </ul>
+
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" id="message" class="form-control">
+      </div>
+    </div>
+
   {{else}}
-    <a href="/login">Login</a>
-    <a href="/register">Register</a>
+    <ul>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/register">Register</a></li>
+    </ul>
   {{/if}}
 </template>
