@@ -1,3 +1,4 @@
+import { Meteor } from 'meteor/meteor';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 import { AccountsTemplates } from 'meteor/useraccounts:core';
@@ -10,6 +11,9 @@ import '../../ui/pages/not-found/not-found.js';
 // Set up all routes in the app
 FlowRouter.route('/', {
   name: 'App.home',
+  subscriptions: function() {
+    this.register('messages', Meteor.subscribe('messages.user'));
+  },
   action() {
     BlazeLayout.render('App_body', { main: 'App_home' });
   },
