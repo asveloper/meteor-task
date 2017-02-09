@@ -9,8 +9,12 @@ Meteor.methods({
     check(description, String);
 
     return Messages.insert({
-      description,
-      createdAt: new Date(),
+      description
     });
   },
+  'messages.remove'(messageId) {
+    check(messageId, String);
+
+    Messages.remove({ _id: messageId });
+  }
 });
