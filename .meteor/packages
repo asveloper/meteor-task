@@ -29,3 +29,5 @@ useraccounts:flow-routing
 npm-bcrypt@0.8.7
 accounts-password
 useraccounts:bootstrap
+twbs:bootstrap
+zimme:collection-timestampable
