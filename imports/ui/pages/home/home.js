@@ -3,6 +3,7 @@ import './home.html';
 import { Meteor } from 'meteor/meteor';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { AccountsTemplates } from 'meteor/useraccounts:core';
+import { Template } from 'meteor/templating';
 
 import { Messages } from '../../../api/messages/messages.js';
 

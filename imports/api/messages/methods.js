@@ -5,13 +5,6 @@ import { check } from 'meteor/check';
 import { Messages } from './messages.js';
 
 Meteor.methods({
-  'messages.insert'(description) {
-    check(description, String);
-
-    return Messages.insert({
-      description
-    });
-  },
   'messages.remove'(messageId) {
     check(messageId, String);
 

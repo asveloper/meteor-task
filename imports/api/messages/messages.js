@@ -12,5 +12,8 @@ Messages.allow({
     if (Meteor.userId())
       return true;
     return false;
+  },
+  remove: function() {
+    return true;
   }
 });
