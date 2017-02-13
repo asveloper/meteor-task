@@ -9,7 +9,5 @@ Meteor.publish('messages.all', function () {
 });
 
 Meteor.publish('messages.user', function (userId) {
-  check(userId, String);
-
   return Messages.find({ createdBy: userId });
 });
