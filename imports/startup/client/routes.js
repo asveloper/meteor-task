@@ -12,7 +12,7 @@ import '../../ui/pages/not-found/not-found.js';
 FlowRouter.route('/', {
   name: 'App.home',
   subscriptions: function() {
-    this.register('messages', Meteor.subscribe('messages.user'));
+    this.register('messages', Meteor.subscribe('messages.user', Meteor.userId()));
   },
   action() {
     BlazeLayout.render('App_body', { main: 'App_home' });

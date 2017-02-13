@@ -2,11 +2,14 @@
 
 import { Meteor } from 'meteor/meteor';
 import { Messages } from '../messages.js';
+import { check } from 'meteor/check';
 
 Meteor.publish('messages.all', function () {
   return Messages.find();
 });
 
-Meteor.publish('messages.user', function () {
-  return Messages.find({ createdBy: this.userId });
+Meteor.publish('messages.user', function (userId) {
+  check(userId, String);
+
+  return Messages.find({ createdBy: userId });
 });
