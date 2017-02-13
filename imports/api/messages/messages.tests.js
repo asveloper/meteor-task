@@ -3,6 +3,7 @@
 // https://guide.meteor.com/testing.html
 
 import { Meteor } from 'meteor/meteor';
+import { Accounts } from 'meteor/accounts-base';
 import { assert } from 'meteor/practicalmeteor:chai';
 import { Messages } from './messages.js';
 

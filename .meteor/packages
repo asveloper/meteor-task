@@ -31,3 +31,4 @@ accounts-password
 useraccounts:bootstrap
 twbs:bootstrap
 zimme:collection-timestampable
+xolvio:cleaner
